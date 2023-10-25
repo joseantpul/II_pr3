@@ -20,3 +20,12 @@ public class ej_8f : MonoBehaviour
         transform.Translate(transform.forward * speed * Time.deltaTime);
     }
 }
+
+/**
+CASI SIEMPRE QUE ROTO EL OBJETO EL TRANSLATE LO HAGO RESPECTO AL MUNDO
+Vector3 dir = transform.forward;
+dir.Normalize();
+transform.Translate(dir * speed * Time.deltaTime, Space.World);
+float giro = Input.GetAxis("Horizontal");
+transform.Rotate(0.0f, giro, 0.0f, Space.Self);
+**/
